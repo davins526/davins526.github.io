@@ -64,3 +64,20 @@
 .contact-main--cinematic .contact-actions .btn{font-size:11px}
 .contact-main--cinematic .copy-link{font-size:10px}
 }
+
+
+/* Contact portrait quality/edge fix — 2026-10-24 */
+.contact-panel--cinematic{background:radial-gradient(ellipse at 62% 30%,#243844 0%,#1a2b35 42%,#16232b 80%)}
+.contact-main--cinematic .contact-stage{left:54%;width:min(43%,440px);top:-62px;bottom:-35px;transform:translateX(-50%);align-items:flex-start;overflow:visible;isolation:isolate}
+.contact-main--cinematic .contact-stage img{display:block;position:relative;width:100%;height:auto;max-width:none;flex:none;object-fit:contain;object-position:top center;transform:none;filter:saturate(.77) contrast(1.045);mix-blend-mode:lighten;-webkit-mask-image:radial-gradient(ellipse 65% 64% at 50% 46%,#000 48%,rgba(0,0,0,.96) 58%,transparent 94%);mask-image:radial-gradient(ellipse 65% 64% at 50% 46%,#000 48%,rgba(0,0,0,.96) 58%,transparent 94%)}
+.contact-main--cinematic .contact-stage:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,36,44,.72),transparent 15%,transparent 59%,#192a33 93%);pointer-events:none}
+.contact-main--cinematic .contact-copy,.contact-main--cinematic .contact-actions{z-index:4}
+@media(max-width:1030px) and (min-width:811px){.contact-main--cinematic .contact-stage{left:52%;width:min(42%,410px)}}
+@media(max-width:810px){
+.contact-main--cinematic .contact-stage{position:relative;left:auto;top:auto;bottom:auto;transform:none;width:min(100%,420px);height:350px;min-height:0;align-self:center;justify-content:center;overflow:hidden;order:2;margin:-12px auto -18px}
+.contact-main--cinematic .contact-stage img{width:100%;height:auto;align-self:flex-start;object-fit:contain;object-position:top center}
+.contact-main--cinematic .contact-stage:after{background:linear-gradient(180deg,rgba(23,36,44,.18),transparent 16%,transparent 59%,#192a33 94%)}
+}
+@media(max-width:560px){
+.contact-main--cinematic .contact-stage{width:min(100%,380px);height:300px;margin:-7px auto -12px}
+}
