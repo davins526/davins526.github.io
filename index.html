@@ -1,91 +1,67 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101112">
-  <meta name="description" content="Даниил Гончаров — разработка, инженерия и личные проекты. Портфолио в формате визуального дневника.">
-  <meta property="og:title" content="Даниил Гончаров — заметки о работе и идеях">
-  <meta property="og:description" content="Разработка и исследования. Проекты, процессы, идеи — личное портфолио.">
-  <title>Даниил Гончаров — проекты, заметки, идеи</title>
-  <link rel="icon" href="./butterfly.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./journal.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#141517">
+<meta name="description" content="Daniil Goncharov — software development, applied systems, AI experiments, and personal projects. A portfolio with a human point of view.">
+<meta property="og:title" content="Daniil Goncharov — Developer & Systems Thinker">
+<meta property="og:description" content="I build systems. I shape ideas. I solve real problems.">
+<title>Daniil Goncharov — Developer & Systems Thinker</title>
+<link rel="icon" href="./butterfly.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./journal.css">
 </head>
 <body>
-  <a class="skip" href="#main">Перейти к содержимому</a>
-  <header class="topbar" id="top">
-    <div class="page-width topbar-inner">
-      <a class="wordmark" href="#top" aria-label="Даниил Гончаров — наверх">dg<span>*</span><small>personal archive</small></a>
-      <nav class="main-nav" id="main-nav" aria-label="Разделы сайта">
-        <a href="#story">история</a><a href="#work">проекты</a><a href="#notes">заметки</a><a href="#contact">контакт</a>
-      </nav>
-      <span class="nav-sidenote">est. 2026 / still in progress</span>
-      <button type="button" class="menu-toggle" id="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span></button>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero page-width" aria-labelledby="hero-title">
-      <div class="hero-writing">
-        <div class="eyebrow"><span class="scribble-star">✳</span> ВЫРЕЗКА ИЗ ЛИЧНОГО АРХИВА <span class="eyebrow-number">№ 001</span></div>
-        <p class="hand-hello">привет. это моя история.</p>
-        <h1 id="hero-title">Даниил<br>Гончаров<span class="ink-dot">.</span></h1>
-        <div class="underline-stroke" aria-hidden="true"></div>
-        <p class="hero-statement">Проектирую системы.<br>Разбираюсь в сложном.<br><span>Делаю своё.</span></p>
-        <p class="hero-description">Разработчик, которому интересны не только технологии, но и то, как из разрозненных идей появляются работающие вещи. Здесь — проекты, эксперименты и немного того, что происходит за кадром.</p>
-        <div class="hero-links"><a class="paper-button" href="#work">листать проекты <span>↗</span></a><a class="bare-link" href="https://github.com/davins526" target="_blank" rel="noopener noreferrer">мой GitHub ↗</a></div>
-        <div class="corner-notation">48° ? <span>no perfect lines here</span></div>
-      </div>
-      <div class="hero-collage" aria-label="Коллаж с фотографией и рисунками">
-        <div class="hero-outline" aria-hidden="true"></div>
-        <span class="collage-label top">SOMEWHERE BETWEEN<br>CODE & IMAGINATION</span>
-        <div class="polaroid portrait-polaroid">
-          <div class="polaroid-photo portrait-photo"><img src="./hero-portrait-hq.webp" alt="Портрет Даниила Гончарова" decoding="async" fetchpriority="high" onerror="this.style.display='none'"></div>
-          <div class="photo-foot"><span>me, probably thinking</span><span>01 / 05</span></div>
-        </div>
-        <div class="polaroid sketch-polaroid" aria-hidden="true"><div class="sketch-photo"><div class="horizon"></div><i></i><i></i><i></i><span>somewhere out there</span></div><span class="mini-caption">place to think.</span></div>
-        <div class="tape tape-one" aria-hidden="true"></div><div class="tape tape-two" aria-hidden="true"></div>
-        <img class="hero-butterfly" src="./butterfly.svg" alt="" aria-hidden="true">
-        <div class="arrow-doodle" aria-hidden="true"><svg viewBox="0 0 124 88"><path d="M5 7Q71 9 92 68M76 59l17 13 9-22"/></svg><span>keep going</span></div>
-        <p class="hero-handnote">nothing is<br>ever really finished.</p>
-        <span class="collage-label bottom">FIG. 01 / THOUGHTS IN MOTION</span>
-      </div>
-      <div class="hero-bottom"><span>scroll to explore</span><span class="scroll-arrow" aria-hidden="true">↓</span><span>EST. 2026 / WORK IN PROGRESS</span></div>
-    </section>
-
-    <section class="paper-divider" aria-label="Фраза о подходе"><div class="paper-divider-inner page-width"><span class="divider-cross">×</span><p>«Мне интереснее понять, <em>почему</em> это работает,<br>чем просто заставить это работать».</p><span class="divider-side">a small reminder to myself / 001</span></div></section>
-
-    <section class="section story page-width" id="story" aria-labelledby="story-title">
-      <div class="section-meta"><span>01 / THE PERSON</span><span>вырвано из блокнота</span></div>
-      <div class="story-layout">
-        <div class="story-heading"><p class="hand-label">a little about me →</p><h2 id="story-title">Человек<br>за <span class="outline-word">экраном.</span></h2><p class="story-kicker">Не только строки кода.<br>Не только строчки в резюме.</p></div>
-        <div class="notebook" role="region" aria-label="Кратко обо мне"><span class="notebook-tape" aria-hidden="true"></span><span class="notebook-top mono">страница / 02 <span>личные заметки</span></span><p>Я работаю с <b>1С и прикладными системами</b>: автоматизирую процессы, разбираю сложные сценарии, связываю данные и интерфейсы.</p><p>А вне рабочих задач исследую <b>ИИ-системы</b>, проектирую собственные инструменты и разрабатываю игру. Люблю, когда у идеи есть характер, а у решения — смысл.</p><div class="notebook-rule"></div><div class="note-signature">сначала понять.<br>потом сделать.</div><div class="note-mark">✳</div></div>
-      </div>
-      <div class="story-facts"><span>01 <b>анализ</b></span><span>02 <b>разработка</b></span><span>03 <b>эксперименты</b></span><span>04 <b>свои истории</b></span></div>
-    </section>
-
-    <section class="work-section" id="work" aria-labelledby="work-title"><div class="page-width">
-      <div class="section-meta"><span>02 / SELECTED WORK</span><span>собрано за 2026</span></div>
-      <div class="section-head"><div><p class="hand-label">found in the archives...</p><h2 id="work-title">Что я<br><em>успел собрать.</em></h2></div><p class="section-subtitle">Не витрина идеальных кейсов, а следы реальной работы: задачи, гипотезы и вещи, которые постепенно обретают форму.</p></div>
-      <div class="project-wall" id="project-wall" aria-live="polite"></div>
-      <p class="wall-footer">* часть рабочих деталей не публикуется — клиентские данные и закрытый код остаются закрытыми.</p>
-    </div></section>
-
-    <section class="notes-section page-width" id="notes" aria-labelledby="notes-title">
-      <div class="section-meta"><span>03 / IN THE MARGINS</span><span>что сейчас изучаю и делаю</span></div>
-      <div class="notes-heading"><div><p class="hand-label">the messy part.</p><h2 id="notes-title">На полях<br>блокнота.</h2></div><p>Небольшая карта того, что у меня постоянно на столе. Здесь нет шкалы «владею на 98%» — только направления, в которых я действительно работаю.</p></div>
-      <div class="notes-scraps"><article class="scrap scrap-one"><span class="scrap-index">01 / DAY JOB</span><h3>Прикладная<br>разработка</h3><p>1С:Предприятие · BSL · запросы · интеграции · расширения</p><div class="scrap-underline" aria-hidden="true"></div><span class="scrap-hand">solve the actual problem</span></article><article class="scrap scrap-two"><span class="scrap-index">02 / CURIOSITY</span><h3>Системы<br>и исследование</h3><p>ИИ-агенты · архитектура · Python · данные · эксперименты</p><div class="scribbled-circle" aria-hidden="true"></div><span class="scrap-hand">what if...?</span></article><article class="scrap scrap-three"><span class="scrap-index">03 / AFTER HOURS</span><h3>Истории<br>и интерфейсы</h3><p>Unity · C# · веб · дизайн · игровые механики</p><span class="scrap-hand">made with curiosity ↗</span><span class="star-doodle" aria-hidden="true">✳</span></article></div>
-      <div class="tiny-note"><span>NOT EVERYTHING HAS TO LOOK PERFECT</span><span>IT JUST HAS TO FEEL REAL.</span></div>
-    </section>
-
-    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="page-width contact-inner"><div class="contact-butterfly" aria-hidden="true"><img src="./butterfly.svg" alt=""></div><span class="contact-meta">04 / LAST PAGE — OR MAYBE THE FIRST</span><p class="hand-label">to be continued...</p><h2 id="contact-title">У каждой идеи<br>есть <em>продолжение.</em></h2><p>Для разговора о проектах, инженерии и новых задачах.</p><div class="contact-links"><a href="https://github.com/davins526" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://t.me/SAVAGESSADISTIC" target="_blank" rel="noopener noreferrer">Telegram <span>↗</span></a></div><span class="contact-handmark">see you somewhere on the internet.</span></div></section>
-  </main>
-  <footer class="site-footer page-width"><a href="#top">dg<span>*</span></a><span>© <span id="copyright-year">2026</span> Даниил Гончаров</span><span>made of curiosity, coffee & unfinished ideas.</span><a class="footer-top" href="#top">↑ наверх</a></footer>
-  <div id="modal-root"></div>
-  <script src="./data.js"></script>
-  <script src="./journal.js"></script>
+<a class="skip-link" href="#content" data-i18n="skip">Skip to content</a>
+<header class="site-header" id="top">
+  <div class="shell header-inner">
+    <a class="brand" href="#top" aria-label="Daniil Goncharov — home"><b>DG.</b><span class="brand-rule"></span><span>Daniil Goncharov</span></a>
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="#about" data-i18n="nav.about">About</a><a href="#projects" data-i18n="nav.projects">Projects</a><a href="#toolkit" data-i18n="nav.toolkit">Toolkit</a><a href="#journey" data-i18n="nav.journey">Journey</a><a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-controls"><div class="language-switch" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="ru" aria-pressed="false">RU</button></div><button id="menu-toggle" class="menu-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"><span></span><span></span><span></span></button></div>
+  </div>
+</header>
+<main id="content">
+<section class="hero shell" aria-labelledby="hero-title">
+  <div class="hero-copy"><div class="chapter mono">// 01 — <span data-i18n="hero.eyebrow">HELLO</span></div>
+    <h1 id="hero-title" data-i18n-html="hero.title">I build systems.<br>I shape ideas.<br><span class="underline-blue">I solve real problems.</span></h1>
+    <p class="hero-description" data-i18n="hero.description">I'm Daniil Goncharov — a developer drawn to complex problems, thoughtful design, and practical solutions. I turn ideas into useful, human-centered digital products.</p>
+    <div class="hero-actions"><a href="#projects" class="paper-button"><span data-i18n="hero.projects">View projects</span><span aria-hidden="true">↗</span></a><a href="#about" class="outline-button" data-i18n="hero.about">About me</a></div>
+    <div class="margin-mark mono">ARCHIVE / DG-026 <span class="thin-star">✳</span></div>
+  </div>
+  <div class="hero-collage" aria-label="Butterfly, torn paper and travel photographs">
+    <div class="sky-fragment"><span class="cloud cloud-one"></span><span class="cloud cloud-two"></span><span class="sky-forest"></span><span class="sky-paper-crease"></span></div>
+    <div class="blue-butterfly" aria-hidden="true"><img src="./butterfly.svg" alt=""></div>
+    <img class="hero-butterfly" src="./butterfly.svg" alt="A white hand-drawn butterfly" fetchpriority="high">
+    <div class="polaroid lighthouse-card" aria-hidden="true"><div class="lighthouse-photo"><div class="lighthouse-sky"></div><svg viewBox="0 0 120 160" aria-hidden="true"><path d="M45 140l9-92h20l9 92z" fill="#d2d3cf" stroke="#252b30" stroke-width="3"/><path d="M43 55h44l-4-15H47zM51 38l7-17h17l7 17z" fill="#303840"/><path d="M45 55h41M51 82h29M50 102h30M50 119h32" stroke="#353d42" stroke-width="3"/><path d="M60 64h10v11H60zM61 90h10v11H61z" fill="#28323b"/><path d="M33 39h62M37 34h55" stroke="#d2d3cf" stroke-width="2"/><path d="M15 141q45-19 96 0" stroke="#29313c" stroke-width="11" fill="none"/></svg></div><div class="polaroid-caption">somewhere, someday / 01</div></div>
+    <div class="hand-note note-hero"><span class="note-pin"></span><span data-i18n-html="hero.note">A small step<br>can change<br>a lot.</span><i></i></div>
+    <div class="hero-scrawl rays" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="spiral" aria-hidden="true">◎</div>
+    <div class="hero-top-fragment" aria-hidden="true"></div><div class="post-lines" aria-hidden="true">﹏﹏﹏</div>
+  </div>
+</section>
+<div class="index-strip shell mono" aria-label="Page sections"><a href="#top">// 01 <span data-i18n="strip.hello">HELLO</span></a><a href="#about">// 02 <span data-i18n="strip.about">ABOUT</span></a><a href="#projects">// 03 <span data-i18n="strip.projects">PROJECTS</span></a><a href="#toolkit">// 04 <span data-i18n="strip.toolkit">TOOLKIT</span></a><a href="#journey">// 05 <span data-i18n="strip.journey">JOURNEY</span></a><a href="#contact">// 06 <span data-i18n="strip.contact">CONTACT</span></a></div>
+<section class="section about-section shell" id="about" aria-labelledby="about-title">
+  <div class="about-art"><div class="chapter mono">// 02 — <span data-i18n="about.eyebrow">ABOUT</span></div><h2 id="about-title" data-i18n-html="about.title">Not just code.<br><span class="underline-blue">A working solution.</span></h2><div class="forest-polaroid polaroid" aria-hidden="true"><div class="forest-scene"><div class="tree-line"></div></div><div class="polaroid-caption">walks / ideas / questions</div></div><span class="pencil-caption" data-i18n-html="about.doodle">Technology<br>with purpose.</span><svg class="hand-arrow" viewBox="0 0 90 58" aria-hidden="true"><path d="M8 16Q48 5 68 45M53 38l17 9 9-14"/></svg><svg class="light-house-line" viewBox="0 0 130 230" fill="none" aria-hidden="true"><path d="M36 218L47 75H86L101 218M43 85h51M35 74l7-26h50l6 26M51 48l6-26h21l7 26M61 22V8h17v14M23 218h91M52 108h34M51 143h37M48 182h43M64 109v18h13v-18M64 153v20h13v-20"/><path d="M31 49h70M37 57h59M14 221q30-23 54-5 31-20 58-5"/></svg></div>
+  <div class="about-body"><p data-i18n="about.p1">I work at the intersection of practical engineering and thoughtful design. I like turning unclear requirements into understandable systems, and finding the simplest reliable way to solve a problem.</p><p data-i18n="about.p2">My daily work focuses on 1C:Enterprise and integrations. Beyond it, I explore AI systems, build personal tools, and develop an atmospheric game. The questions matter as much as the code.</p><div class="about-facts"><div><span class="mono" data-i18n="about.focusLabel">FOCUS</span><b data-i18n="about.focus">Business systems & integrations</b></div><div><span class="mono" data-i18n="about.approachLabel">APPROACH</span><b data-i18n="about.approach">Understand first. Build second.</b></div><div><span class="mono" data-i18n="about.valuesLabel">VALUES</span><b data-i18n="about.values">Clarity, reliability, curiosity</b></div></div></div>
+  <svg class="deer-doodle" viewBox="0 0 130 180" fill="none" aria-hidden="true"><path d="M47 56l-15-29-7-5m22 34-1-35-15-10m-1 15-12-8m58 38 13-29 7-9M76 56l-1-33 15-11m2 20 13-7M47 58q-14 9-9 27l17 17 3 46m20-90q17 5 14 26l-15 17 2 48M54 102q-25 8-27 25l20 6 2 31M78 103q29 8 28 25l-17 5 1 31M58 148l-1 23m23-22 2 22M38 70l-16-10M91 71l13-8"/><circle cx="53" cy="72" r="2" fill="currentColor"/><circle cx="80" cy="72" r="2" fill="currentColor"/></svg>
+</section>
+<section class="projects-section" id="projects" aria-labelledby="projects-title"><div class="shell">
+  <div class="torn-heading"><div><div class="chapter mono">// 03 — <span data-i18n="projects.eyebrow">PROJECTS</span></div><h2 id="projects-title" data-i18n-html="projects.title">From practice.<br><span class="underline-blue">From my own initiative.</span></h2></div><span class="header-handwritten" data-i18n-html="projects.note">Real projects,<br>real impact. ↓</span><svg class="mountain-doodle" viewBox="0 0 270 110" fill="none" aria-hidden="true"><path d="M3 99l57-73 30 33 32-51 69 90M85 97l47-68 57 68M29 95l30-42 27 41M55 45l5-19 15 17M116 100l20-24 15 22M171 95l26-36 28 36M187 93l21-52 21 49M218 90l13-21 24 25M1 103h269"/><path d="M16 95l10-33 10 33m-5-11 10-23 12 36M222 96l10-34 9 33m-5-16 8-28 16 42"/></svg></div>
+  <div class="project-filters" role="group" aria-label="Project filters"><button type="button" data-filter="all" aria-pressed="true" data-i18n="filter.all">All</button><button type="button" data-filter="work" aria-pressed="false" data-i18n="filter.work">Applied systems</button><button type="button" data-filter="web" aria-pressed="false" data-i18n="filter.web">Web & design</button><button type="button" data-filter="personal" aria-pressed="false" data-i18n="filter.personal">Personal projects</button></div>
+  <div class="project-grid" id="project-grid" aria-live="polite"></div>
+  <div class="project-decoration" aria-hidden="true"><span class="spiral-small">◎</span><span class="scribble-x">×</span><span class="scrap-butterfly"><img src="./butterfly.svg" alt=""></span></div>
+</div></section>
+<section class="section toolkit-section shell" id="toolkit" aria-labelledby="toolkit-title"><div class="toolkit-intro"><div class="chapter mono">// 04 — <span data-i18n="toolkit.eyebrow">TOOLKIT</span></div><h2 id="toolkit-title" data-i18n-html="toolkit.title">Tools for ideas<br><span class="underline-blue">to become real.</span></h2><p data-i18n="toolkit.description">A collection of technologies I actually use to research, design, and ship projects.</p><div class="camera-illustration" aria-hidden="true"><svg viewBox="0 0 150 125" fill="none"><path d="M19 38L42 22h65l22 16v58H18zM21 50h106M32 53v28h27V53M78 57h41v22H78zM23 85h104v15H23zM30 31h15M60 26h36M34 91h83"/><circle cx="99" cy="68" r="13"/><circle cx="99" cy="68" r="7"/><path d="M36 14h62l12 9H35z"/></svg><span>make / break / learn</span></div></div><div class="stack-list" id="stack-list"></div><div class="toolkit-butterfly" aria-hidden="true"><img src="./butterfly.svg" alt=""></div></section>
+<section class="section journey-section shell" id="journey" aria-labelledby="journey-title"><div class="journey-copy"><div class="chapter mono">// 05 — <span data-i18n="journey.eyebrow">JOURNEY</span></div><h2 id="journey-title" data-i18n-html="journey.title">A path of<br><span class="underline-blue">continuous growth.</span></h2><p data-i18n="journey.description">Work, experiments, and deliberate learning — all part of the same story.</p><div class="journey-scrap"><div class="forest-scene"><div class="tree-line"></div></div><span data-i18n-html="journey.note">Different projects.<br>The same direction —<br>growth.</span></div></div><div class="timeline" id="timeline"></div><svg class="journey-pines" viewBox="0 0 180 260" aria-hidden="true" fill="none"><path d="M25 241V76m-4 0L2 107l20-14-20 33 21-12-18 38 19-12-14 42 15-11m1-95 16 33-18-12 23 40-22-15 25 42-24-16 32 48-34-19M116 250V16m-5 0L71 76l39-30-43 66 42-30-40 66 41-28-43 76 48-32m4-149 42 66-41-28 44 66-42-31 45 70-44-32 51 83-54-36M76 240h93"/></svg></section>
+<section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="shell contact-paper"><div class="contact-copy"><div class="chapter mono">// 06 — <span data-i18n="contact.eyebrow">CONTACT</span></div><h2 id="contact-title" data-i18n-html="contact.title">Let's create<br>something <em>meaningful.</em></h2><p data-i18n="contact.description">For conversations about engineering, research, ambitious ideas, and useful products.</p></div><div class="contact-actions"><a href="https://t.me/SAVAGESSADISTIC" target="_blank" rel="noopener noreferrer"><span>✈</span><span data-i18n="contact.message">Get in touch</span><span>↗</span></a><a href="https://github.com/davins526" target="_blank" rel="noopener noreferrer"><span>⌘</span><span>GitHub</span><span>↗</span></a><button id="copy-profile" type="button"><span>⎘</span><span data-i18n="contact.copy">Copy profile link</span><span>↗</span></button></div><div class="contact-snapshot polaroid" aria-hidden="true"><div class="shore-scene"></div><div class="polaroid-caption">to be continued.</div></div></div></section>
+</main>
+<footer class="site-footer shell"><a class="footer-brand" href="#top">DG.</a><span>© <span id="year">2026</span> Daniil Goncharov <span data-i18n="footer.tagline">— Developer & systems thinker</span></span><a class="back-top" href="#top" data-i18n="footer.top">Back to top ↑</a></footer>
+<div id="modal-root"></div>
+<script src="./data.js"></script><script src="./journal.js"></script>
 </body>
 </html>
