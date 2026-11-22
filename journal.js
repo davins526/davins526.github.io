@@ -26,15 +26,12 @@
  const trans = key => i18n[locale][key] || key;
  const grid = document.getElementById('project-grid');
  const cardArt = name => {
-  if(name==='exchange')return '<div class="art-exchange"><div class="entity">DBF<span>INPUT</span></div><div class="wire"></div><div class="entity">1C<span>PROCESS</span></div><div class="wire"></div><div class="entity">OK<span>EXPORT</span></div></div>';
-  if(name==='export')return '<div class="art-export"><div class="file">A</div><div class="file">L</div><div class="file">I</div></div>';
-  if(name==='mail')return '<div class="art-mail"><svg viewBox="0 0 120 86"><rect x="12" y="14" width="96" height="60" rx="2"/><path d="M13 16l47 34 48-34M14 73l34-31m60 31L76 42"/></svg></div>';
-  if(name==='web')return '<div class="art-web"><div class="browser"><div class="bar"><i></i><i></i><i></i></div><div class="topline"></div><div class="line"></div><div class="line short"></div><div class="tile-row"><i></i><i></i><i></i></div></div></div>';
-  return '<div class="art-jester"><span class="orbit"></span><span class="chess-piece">♜</span></div>';
+  const filenames = {exchange:'project-exchange',export:'project-export',mail:'project-mail',web:'project-web',jester:'project-jester'};
+  return `<img src="./assets/${filenames[name] || 'project-web'}.svg" loading="lazy" decoding="async" alt="">`;
  };
  const renderCards = () => {
   const visible = projects.filter(p=>activeFilter==='all'||p.type===activeFilter);
-  grid.innerHTML=visible.map((p,i)=>{const d=p[locale];const tags=p.stack.slice(0,2);return `<button class="project-item" type="button" data-open="${safe(p.id)}" aria-label="${safe(trans('modal.open'))}: ${safe(d.name)}"><div class="project-media">${cardArt(p.art)}</div><div class="project-content"><span class="project-index">FILE ${safe(p.no)} / ${safe(d.category.toUpperCase())}</span><span class="project-open" aria-hidden="true">↗</span><h3>${safe(d.name)}</h3><p>${safe(d.intro)}</p><div class="project-tags">${tags.map(t=>`<span>${safe(t)}</span>`).join('')}</div></div></button>`}).join('');
+  grid.innerHTML=visible.map((p,i)=>{const d=p[locale];const tags=p.stack.slice(0,2);return `<button class="project-item" type="button" data-project-type="${safe(p.type)}" data-open="${safe(p.id)}" aria-label="${safe(trans('modal.open'))}: ${safe(d.name)}"><div class="project-media">${cardArt(p.art)}</div><div class="project-content"><span class="project-index">FILE ${safe(p.no)} / ${safe(d.category.toUpperCase())}</span><span class="project-open" aria-hidden="true">↗</span><h3>${safe(d.name)}</h3><p>${safe(d.intro)}</p><div class="project-tags">${tags.map(t=>`<span>${safe(t)}</span>`).join('')}</div></div></button>`}).join('');
  };
  const renderStack = () => {document.getElementById('stack-list').innerHTML=stacks.map(x=>{const d=x[locale];return `<div class="stack-group"><span class="stack-icon" aria-hidden="true">${safe(x.icon)}</span><div><h3 class="stack-title">${safe(d.title)}</h3><span class="stack-caption">${safe(d.caption)}</span><div class="stack-tags">${d.items.map(i=>`<span>${safe(i)}</span>`).join('')}</div></div></div>`}).join('')};
  const renderTimeline = () => {document.getElementById('timeline').innerHTML=journey.map(x=>{const d=x[locale];return `<div class="timeline-item"><span class="timeline-date">${safe(d.date)}</span><h3>${safe(d.title)}</h3><p>${safe(d.body)}</p></div>`}).join('')};
