@@ -1,0 +1,70 @@
+(() => {
+ 'use strict';
+ const i18n = {
+  en:{skip:'Skip to content','nav.about':'About','nav.projects':'Projects','nav.toolkit':'Toolkit','nav.journey':'Journey','nav.contact':'Contact',
+  'hero.eyebrow':'HELLO','hero.title':'I build systems.<br>I shape ideas.<br><span class="underline-blue">I solve real problems.</span>','hero.description':"I'm Daniil Goncharov — a developer drawn to complex problems, thoughtful design, and practical solutions. I turn ideas into useful, human-centered digital products.",'hero.projects':'View projects','hero.about':'About me','hero.note':'A small step<br>can change<br>a lot.',
+  'strip.hello':'HELLO','strip.about':'ABOUT','strip.projects':'PROJECTS','strip.toolkit':'TOOLKIT','strip.journey':'JOURNEY','strip.contact':'CONTACT',
+  'about.eyebrow':'ABOUT','about.title':'Not just code.<br><span class="underline-blue">A working solution.</span>','about.p1':'I work at the intersection of practical engineering and thoughtful design. I like turning unclear requirements into understandable systems, and finding the simplest reliable way to solve a problem.','about.p2':'My daily work focuses on 1C:Enterprise and integrations. Beyond it, I explore AI systems, build personal tools, and develop an atmospheric game. The questions matter as much as the code.','about.focusLabel':'FOCUS','about.focus':'Business systems & integrations','about.approachLabel':'APPROACH','about.approach':'Understand first. Build second.','about.valuesLabel':'VALUES','about.values':'Clarity, reliability, curiosity','about.doodle':'Technology<br>with purpose.',
+  'projects.eyebrow':'PROJECTS','projects.title':'From practice.<br><span class="underline-blue">From my own initiative.</span>','projects.note':'Real projects,<br>real impact. ↓','filter.all':'All','filter.work':'Applied systems','filter.web':'Web & design','filter.personal':'Personal projects',
+  'toolkit.eyebrow':'TOOLKIT','toolkit.title':'Tools for ideas<br><span class="underline-blue">to become real.</span>','toolkit.description':'A collection of technologies I actually use to research, design, and ship projects.',
+  'journey.eyebrow':'JOURNEY','journey.title':'A path of<br><span class="underline-blue">continuous growth.</span>','journey.description':'Work, experiments, and deliberate learning — all part of the same story.','journey.note':'Different projects.<br>The same direction —<br>growth.',
+  'contact.eyebrow':'CONTACT','contact.title':"Let's create<br>something <em>meaningful.</em>",'contact.description':'For conversations about engineering, research, ambitious ideas, and useful products.','contact.message':'Get in touch','contact.copy':'Copy profile link','contact.copied':'Link copied','footer.tagline':'— Developer & systems thinker','footer.top':'Back to top ↑',
+  'modal.challenge':'01 / CHALLENGE','modal.solution':'02 / WHAT I BUILT','modal.result':'03 / OUTCOME','modal.status':'STATUS','modal.close':'Close case study','modal.open':'Open case study',title:'Daniil Goncharov — Developer & Systems Thinker',description:'Daniil Goncharov — software development, applied systems, AI experiments, and personal projects.'},
+  ru:{skip:'К содержанию','nav.about':'Обо мне','nav.projects':'Проекты','nav.toolkit':'Инструменты','nav.journey':'Опыт','nav.contact':'Контакты',
+  'hero.eyebrow':'ПРИВЕТ','hero.title':'Создаю системы.<br>Воплощаю идеи.<br><span class="underline-blue">Решаю реальные задачи.</span>','hero.description':'Я Даниил Гончаров — разработчик, которому интересны сложные задачи, продуманный дизайн и практические решения. Превращаю идеи в полезные цифровые продукты.','hero.projects':'Смотреть проекты','hero.about':'Обо мне','hero.note':'Маленький шаг<br>может изменить<br>многое.',
+  'strip.hello':'ПРИВЕТ','strip.about':'ОБО МНЕ','strip.projects':'ПРОЕКТЫ','strip.toolkit':'СТЕК','strip.journey':'ОПЫТ','strip.contact':'КОНТАКТЫ',
+  'about.eyebrow':'ОБО МНЕ','about.title':'Не просто код.<br><span class="underline-blue">Работающее решение.</span>','about.p1':'Работаю на пересечении прикладной разработки и осмысленного проектирования. Мне нравится превращать непонятные требования в понятные системы и искать самые простые надёжные решения.','about.p2':'В работе мой основной инструмент — 1С:Предприятие и интеграции. Параллельно изучаю ИИ-системы, делаю собственные инструменты и разрабатываю атмосферную игру. Вопросы не менее важны, чем код.','about.focusLabel':'ФОКУС','about.focus':'Бизнес-системы и интеграции','about.approachLabel':'ПОДХОД','about.approach':'Сначала понять. Потом сделать.','about.valuesLabel':'ПРИНЦИПЫ','about.values':'Ясность, надёжность, любопытство','about.doodle':'Технологии<br>со смыслом.',
+  'projects.eyebrow':'ПРОЕКТЫ','projects.title':'Из практики.<br><span class="underline-blue">И по собственной инициативе.</span>','projects.note':'Реальные задачи,<br>реальный результат. ↓','filter.all':'Все','filter.work':'Прикладные системы','filter.web':'Веб и дизайн','filter.personal':'Личные проекты',
+  'toolkit.eyebrow':'ИНСТРУМЕНТЫ','toolkit.title':'Инструменты,<br><span class="underline-blue">воплощающие идеи.</span>','toolkit.description':'Технологии, которые я действительно использую для исследований, проектирования и разработки.',
+  'journey.eyebrow':'ПУТЬ','journey.title':'В постоянном<br><span class="underline-blue">развитии.</span>','journey.description':'Работа, эксперименты и обучение — части одной истории.','journey.note':'Разные проекты.<br>Одно направление —<br>развитие.',
+  'contact.eyebrow':'КОНТАКТЫ','contact.title':'Создадим<br>что-то <em>значимое.</em>','contact.description':'Для общения об инженерии, исследованиях, смелых идеях и полезных продуктах.','contact.message':'Написать мне','contact.copy':'Скопировать GitHub','contact.copied':'Ссылка скопирована','footer.tagline':'— Разработчик и инженер систем','footer.top':'Наверх ↑',
+  'modal.challenge':'01 / ЗАДАЧА','modal.solution':'02 / РЕАЛИЗАЦИЯ','modal.result':'03 / РЕЗУЛЬТАТ','modal.status':'СТАТУС','modal.close':'Закрыть проект','modal.open':'Открыть проект',title:'Даниил Гончаров — разработчик и инженер систем',description:'Даниил Гончаров — прикладная разработка, ИИ, исследования и личные проекты.'}
+ };
+ const safe = x => String(x ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ let locale='en'; try{if(localStorage.getItem('dg-portfolio-language')==='ru') locale='ru'}catch{}
+ let activeFilter='all';
+ const trans = key => i18n[locale][key] || key;
+ const grid = document.getElementById('project-grid');
+ const cardArt = name => {
+  if(name==='exchange')return '<div class="art-exchange"><div class="entity">DBF<span>INPUT</span></div><div class="wire"></div><div class="entity">1C<span>PROCESS</span></div><div class="wire"></div><div class="entity">OK<span>EXPORT</span></div></div>';
+  if(name==='export')return '<div class="art-export"><div class="file">A</div><div class="file">L</div><div class="file">I</div></div>';
+  if(name==='mail')return '<div class="art-mail"><svg viewBox="0 0 120 86"><rect x="12" y="14" width="96" height="60" rx="2"/><path d="M13 16l47 34 48-34M14 73l34-31m60 31L76 42"/></svg></div>';
+  if(name==='web')return '<div class="art-web"><div class="browser"><div class="bar"><i></i><i></i><i></i></div><div class="topline"></div><div class="line"></div><div class="line short"></div><div class="tile-row"><i></i><i></i><i></i></div></div></div>';
+  return '<div class="art-jester"><span class="orbit"></span><span class="chess-piece">♜</span></div>';
+ };
+ const renderCards = () => {
+  const visible = projects.filter(p=>activeFilter==='all'||p.type===activeFilter);
+  grid.innerHTML=visible.map((p,i)=>{const d=p[locale];const tags=p.stack.slice(0,2);return `<button class="project-item" type="button" data-open="${safe(p.id)}" aria-label="${safe(trans('modal.open'))}: ${safe(d.name)}"><div class="project-media">${cardArt(p.art)}</div><div class="project-content"><span class="project-index">FILE ${safe(p.no)} / ${safe(d.category.toUpperCase())}</span><span class="project-open" aria-hidden="true">↗</span><h3>${safe(d.name)}</h3><p>${safe(d.intro)}</p><div class="project-tags">${tags.map(t=>`<span>${safe(t)}</span>`).join('')}</div></div></button>`}).join('');
+ };
+ const renderStack = () => {document.getElementById('stack-list').innerHTML=stacks.map(x=>{const d=x[locale];return `<div class="stack-group"><span class="stack-icon" aria-hidden="true">${safe(x.icon)}</span><div><h3 class="stack-title">${safe(d.title)}</h3><span class="stack-caption">${safe(d.caption)}</span><div class="stack-tags">${d.items.map(i=>`<span>${safe(i)}</span>`).join('')}</div></div></div>`}).join('')};
+ const renderTimeline = () => {document.getElementById('timeline').innerHTML=journey.map(x=>{const d=x[locale];return `<div class="timeline-item"><span class="timeline-date">${safe(d.date)}</span><h3>${safe(d.title)}</h3><p>${safe(d.body)}</p></div>`}).join('')};
+ const renderTranslations = () => {
+  document.documentElement.lang=locale;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{el.textContent=trans(el.dataset.i18n)});
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{el.innerHTML=trans(el.dataset.i18nHtml)});
+  document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===locale)));
+  document.title=trans('title');document.querySelector('meta[name=description]').content=trans('description');
+  document.querySelector('meta[property="og:title"]').content=trans('title');document.querySelector('meta[property="og:description"]').content=trans('description');
+  document.querySelector('#site-nav').setAttribute('aria-label',locale==='en'?'Main navigation':'Навигация');
+  document.querySelector('.language-switch').setAttribute('aria-label',locale==='en'?'Language':'Язык');
+  document.querySelector('#menu-toggle').setAttribute('aria-label',locale==='en'?'Open navigation':'Открыть меню');
+  document.querySelector('.hero-collage').setAttribute('aria-label',locale==='en'?'Butterfly, torn paper and travel photographs':'Бабочка, бумажный коллаж и фотографии');
+  document.querySelector('.hero-butterfly').alt=locale==='en'?'A white hand-drawn butterfly':'Белая нарисованная от руки бабочка';
+  document.querySelector('.project-filters').setAttribute('aria-label',locale==='en'?'Project filters':'Фильтры проектов');
+  renderCards();renderStack();renderTimeline();
+ };
+ document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',()=>{locale=btn.dataset.lang;try{localStorage.setItem('dg-portfolio-language',locale)}catch{}renderTranslations()}));
+ document.querySelectorAll('[data-filter]').forEach(btn=>btn.addEventListener('click',()=>{activeFilter=btn.dataset.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));renderCards()}));
+ let previousFocus=null;
+ const modalRoot=document.getElementById('modal-root');
+ function closeModal(){modalRoot.innerHTML='';document.body.style.overflow='';previousFocus?.focus()}
+ function openModal(id){const p=projects.find(x=>x.id===id);if(!p)return;previousFocus=document.activeElement;const d=p[locale];modalRoot.innerHTML=`<div class="modal-backdrop" id="modal-backdrop"><section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1"><div class="modal-header"><span>PROJECT FILE / ${safe(p.no)} / ${safe(p.year)}</span><button class="modal-close" type="button" aria-label="${safe(trans('modal.close'))}">×</button></div><h2 id="modal-title">${safe(d.name)}</h2><p class="modal-intro">${safe(d.intro)}</p><h3>${safe(trans('modal.challenge'))}</h3><p>${safe(d.challenge)}</p><h3>${safe(trans('modal.solution'))}</h3><ul>${d.solution.map(s=>`<li>${safe(s)}</li>`).join('')}</ul><h3>${safe(trans('modal.result'))}</h3><p>${safe(d.result)}</p>${d.note?`<p class="modal-note">${safe(d.note)}</p>`:''}<div class="modal-tags">${p.stack.map(s=>`<span>${safe(s)}</span>`).join('')}</div><p class="modal-status">${safe(trans('modal.status'))} — ${safe(d.status)}</p></section></div>`;document.body.style.overflow='hidden';modalRoot.querySelector('.modal-close').focus()}
+ document.addEventListener('click',e=>{const trigger=e.target.closest('[data-open]');if(trigger)openModal(trigger.dataset.open);if(e.target.closest('.modal-close')||e.target.id==='modal-backdrop')closeModal()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modalRoot.firstChild)closeModal();if(e.key==='Tab'&&modalRoot.firstChild){const dialog=modalRoot.querySelector('.modal-dialog'),focusables=[...dialog.querySelectorAll('button, a[href], input, textarea, select')];if(!focusables.length)return;let first=focusables[0],last=focusables[focusables.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+ const nav=document.getElementById('site-nav'),menuBtn=document.getElementById('menu-toggle');
+ menuBtn.addEventListener('click',()=>{const open=menuBtn.getAttribute('aria-expanded')!=='true';nav.classList.toggle('open',open);menuBtn.setAttribute('aria-expanded',String(open));menuBtn.setAttribute('aria-label',locale==='en'?(open?'Close navigation':'Open navigation'):(open?'Закрыть меню':'Открыть меню'))});
+ nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
+ document.getElementById('copy-profile').addEventListener('click',async()=>{const url='https://github.com/davins526';try{await navigator.clipboard.writeText(url);const el=document.querySelector('#copy-profile span:nth-child(2)');el.textContent=trans('contact.copied');setTimeout(()=>el.textContent=trans('contact.copy'),1900)}catch{window.open(url,'_blank','noopener,noreferrer')}});
+ document.getElementById('year').textContent=new Date().getFullYear();
+ renderTranslations();
+})();
