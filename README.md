@@ -1,37 +1,39 @@
-# Даниил Гончаров / Personal Archive
+# DG. / A Personal Scrapbook
 
-Исходники личного сайта [goncharov-code.ru](https://goncharov-code.ru/).
+Source code for **[goncharov-code.ru](https://goncharov-code.ru/)** — Daniil Goncharov's personal portfolio.
 
-## Визуальная концепция
+An independent portfolio inspired by the visual language of analog journals: torn paper, instant photographs, handwritten notes, illustrated project cards, and a hand-drawn butterfly. The overall identity is intentionally restrained: charcoal, off-white, and muted blue.
 
-**Личный визуальный дневник**, вдохновлённый атмосферой Life is Strange: чёрно-белая палитра, бумага, Polaroid, небольшие неровные подписи, вырезки и рисунки. Все декоративные элементы сайта созданы отдельно; графика из игры не используется.
+## What is inside
 
-## Технологии
+- **Bilingual interface:** English by default, with an EN / RU switcher. The choice persists locally.
+- **Selected work:** five grounded case studies covering 1C:Enterprise, integrations, a web redesign, and the JESTER game.
+- **Project dialogs:** challenge, approach, outcome, stack, and honest project status in both languages.
+- **Responsive design:** a single lightweight static page with accessible navigation and keyboard-operable dialogs.
+- **Original imagery:** the main butterfly was adapted from the site's owner's supplied illustration.
 
-HTML, CSS и Vanilla JavaScript. Сборщик и бекенд не нужны.
+## Technology
 
-| Файл | Назначение |
+HTML, CSS, and vanilla JavaScript. No bundler, framework, telemetry, or runtime backend required.
+
+| File | Purpose |
 | --- | --- |
-| `index.html` | Новая структура сайта |
-| `journal.css` | Тёмно-бумажная дизайн-система и адаптивная вёрстка |
-| `journal.js` | Карточки кейсов, модальные окна, мобильная навигация |
-| `data.js` | Описания пяти проектов; редактируется отдельно от дизайна |
-| `butterfly.svg` | Авторский декоративный знак |
-| `hero-portrait-hq.webp` | Портрет для Polaroid на первом экране |
-| `CNAME` | Настройка собственного домена GitHub Pages |
+| `index.html` | Semantic page structure and SEO metadata |
+| `journal.css` | Responsive scrapbook design system |
+| `data.js` | Bilingual project, skill and timeline data |
+| `journal.js` | Language switching, filters, modals and navigation |
+| `butterfly-original.png` | Main hero emblem |
+| `butterfly.svg` | Supporting vector motif / favicon |
+| `CNAME` | Custom domain configuration |
 
-Файлы старого дизайна `styles.css`, `app.js` и другие ассеты остаются в истории/репозитории для безопасного отката, но новой страницей не загружаются.
-
-## Предпросмотр
+## Run locally
 
 ```bash
 python -m http.server 8000
 ```
 
-Откройте `http://localhost:8000/` из корня проекта.
+Visit `http://localhost:8000/`. For deployment, GitHub Pages publishes the repository's `main` branch.
 
-## Публикация
+Commercial examples intentionally omit private customer records and proprietary source code.
 
-GitHub Pages публикует `main`. Изменения дизайна готовятся в отдельной ветке и через pull request. Не объединяйте PR без проверки, что новый дизайн одобрен. `CNAME` не изменять.
-
-Клиентские данные и непубличные исходники не публикуются.
+© 2026 Daniil Goncharov.
