@@ -1,57 +1,30 @@
-// Main editable site content. No confidential client datasets are included.
-const profile = {
-  name: 'Даниил Гончаров',
-  github: 'https://github.com/davins526',
-  role: 'Software Developer',
-  place: 'Россия',
-  // Set your real contact links here once you want to publish them:
-  email: '',
-  telegram: '',
-}
-
+'use strict';
+// Public summaries only. No client datasets or proprietary source code.
 const projects = [
-  {
-    id: 'dbf', no: '01', name: 'Обмен данными с УСЗН', english: 'DATA EXCHANGE / DBF', category: '1С / Интеграции', status: 'Реализовано',
-    intro: 'Внешняя обработка 1С: сверка адресов, автоматический поиск лицевых счетов и подготовка данных для обмена.', year: '2026', stack: ['1С:Предприятие', 'BSL', 'DBF', 'Запросы'], art: 'exchange', size: 'wide',
-    challenge: 'Автоматизировать работу с DBF-файлами при различиях в данных и справочниках клиентских баз.',
-    solution: ['Поиск лицевого счёта по адресу с обработкой нетиповых случаев.', 'Гибкие соответствия услуг с возможностью настройки для разных баз.', 'Расчёт сумм, проверка данных и исключение строк из выгрузки.', 'Учет ограничений управляемых форм и клиент-серверного выполнения.'],
-    result: 'Разработана и протестирована внешняя обработка для типового процесса обмена.',
-    note: 'Публичное описание без клиентских данных и исходников закрытой конфигурации.'
-  },
-  {
-    id: 'epd', no: '02', name: 'Выгрузка файлов ЕПД', english: 'STRUCTURED EXPORT / A-L-I', category: '1С / Интеграции', status: 'Передано на проверку',
-    intro: 'Формирование структурированных файлов абонентов, начислений и сообщений в строгом формате обмена.', year: '2026', stack: ['1С:Предприятие', 'BSL', 'TXT', 'Windows-1251'], art: 'epd',
-    challenge: 'Формировать пакет A/L/I с фиксированным порядком реквизитов и правилами представления данных.',
-    solution: ['Отдельные сценарии формирования файлов A, L и I.', 'Управление сопоставлением услуг и содержимым сообщений.', 'Нормализация текста, дат, чисел и составных адресов.', 'Проверка структуры и тестирование выходных файлов.'],
-    result: 'Обработка подготовлена и передана руководителю на проверку.',
-    note: 'Формат и тестовые результаты описаны без раскрытия конфиденциальных сведений.'
-  },
-  {
-    id: 'mail', no: '03', name: 'Персонализация рассылки ЕПД', english: 'EMAIL / AUTOMATION', category: '1С / Интеграции', status: 'В работе',
-    intro: 'Проект доработки штатной рассылки квитанций: персонализированные HTML-письма и безопасный сценарий внедрения.', year: '2026', stack: ['1С:Предприятие', 'HTML', 'Расширения', 'Тестирование'], art: 'mail',
-    challenge: 'Добавить настраиваемое оформление письма для отдельного клиента, не влияя на остальных пользователей конфигурации.',
-    solution: ['Анализ существующей процедуры рассылки и источников данных.', 'Планирование изолированного расширения конфигурации.', 'Предусмотрены тестовая копия базы, отключение реальной отправки и проверка персонализации.'],
-    result: 'Проект находится в разработке; итоговое внедрение не заявляется.'
-  },
-  {
-    id: 'web', no: '04', name: 'Редизайн kv-plata.ru', english: 'WEB / USER EXPERIENCE', category: 'Web / Дизайн', status: 'В работе',
-    intro: 'Новая информационная архитектура и спокойная корпоративная визуальная система для сервиса расчёта квартплаты.', year: '2026', stack: ['Figma', 'UI/UX', 'HTML / CSS', '1С-Битрикс'], art: 'web',
-    challenge: 'Упростить сложный многостраничный сайт, сохранив профессиональную подачу и доступность материалов.',
-    solution: ['Пересборка навигации и приоритетов контента.', 'Единая палитра, сетка и правила типографики.', 'Проработка главной и внутренних страниц; отдельный сценарий базы знаний.'],
-    result: 'Идёт проектирование и поэтапная реализация обновлённого сайта.'
-  },
-  {
-    id: 'jester', no: '05', name: 'GameJester', english: 'PERSONAL / GAME DEVELOPMENT', category: 'Личные проекты', status: 'Концепция и разработка',
-    intro: 'Авторский атмосферный игровой проект о придворном шуте, интригах и последствиях решений.', year: '2026', stack: ['Unity', 'C#', 'Game Design', 'Narrative'], art: 'jester',
-    challenge: 'Создать эмоциональный игровой опыт, где роль шута выражается в действиях, а не только диалогах.',
-    solution: ['Проектирование камерного игрового пространства и расписаний NPC.', 'Механики подслушивания, социальных интриг и моральных последствий.', 'Поиск визуального языка и структуры первого прототипа.'],
-    result: 'Личный проект на стадии концепции и прототипирования.',
-    note: 'Репозиторий проекта пока закрыт.'
-  },
-]
-
-const stack = [
-  { index: '01', title: 'Прикладная разработка', text: 'Основной рабочий фокус', items: ['1С:Предприятие 8.3', 'BSL / Запросы 1С', 'Управляемые формы', 'Обработки и расширения', '1С:EDT'] },
-  { index: '02', title: 'Разработка и данные', text: 'Языки и инструменты', items: ['C# / .NET', 'Python', 'SQL', 'Файловый обмен', 'Git / GitHub'] },
-  { index: '03', title: 'Веб и интерфейсы', text: 'Проектирование и реализация', items: ['HTML / CSS / JavaScript', 'Figma', 'UI / UX', '1С-Битрикс', 'Адаптивный дизайн'] },
-]
+ {id:'dbf',no:'01',type:'work',art:'exchange',year:'2026',stack:['1C:Enterprise','BSL','DBF','Queries'],
+  en:{name:'Data Exchange with Social Services',category:'Applied systems',status:'Built and tested',intro:'A 1C tool for reconciling addresses, matching accounts and preparing structured data exchange.',challenge:'Automate DBF exchanges despite inconsistent addresses and reference data across client installations.',solution:['Account lookup and address normalization for exceptional cases.','Configurable service mappings for different databases.','Data validation, calculated amounts and selective export.','Handled client/server restrictions in managed forms.'],result:'An external processing tool developed and tested for the exchange workflow.',note:'Published as a technical summary without client data or proprietary sources.'},
+  ru:{name:'Обмен данными с УСЗН',category:'Прикладные системы',status:'Разработано и проверено',intro:'Обработка 1С для сверки адресов, поиска лицевых счетов и подготовки обмена данными.',challenge:'Автоматизировать DBF-обмен при различиях адресов и справочников клиентских баз.',solution:['Поиск лицевых счетов и нормализация адресов в нестандартных случаях.','Настраиваемые соответствия услуг для разных баз.','Проверка данных, расчёт сумм и выборочная выгрузка.','Учёт ограничений управляемых форм и клиент-серверного режима.'],result:'Разработана и протестирована внешняя обработка для обмена.',note:'Без клиентских данных и закрытых исходников.'}},
+ {id:'epd',no:'02',type:'work',art:'export',year:'2026',stack:['1C:Enterprise','BSL','TXT','Windows-1251'],
+  en:{name:'EPD File Export',category:'Applied systems',status:'Submitted for review',intro:'Structured files for subscribers, charges and messages in a strict A/L/I interchange format.',challenge:'Generate A, L and I file sets with precise field order and formatting rules.',solution:['Separate generation flows for A, L and I files.','Service mappings and message content configuration.','Normalization of dates, decimals, addresses and text encoding.','File structure checks against test fixtures.'],result:'Processing tool prepared and submitted for review.',note:'No confidential records are included.'},
+  ru:{name:'Выгрузка файлов ЕПД',category:'Прикладные системы',status:'Передано на проверку',intro:'Формирование структурированных файлов абонентов, начислений и сообщений в формате A/L/I.',challenge:'Сформировать набор A/L/I с фиксированным порядком и форматом полей.',solution:['Раздельные сценарии генерации A, L и I.','Сопоставление услуг и настройка содержания сообщений.','Нормализация дат, чисел, адресов и кодировки.','Проверка структуры на тестовых файлах.'],result:'Обработка подготовлена и передана на проверку.',note:'Без конфиденциальных данных.'}},
+ {id:'mail',no:'03',type:'work',art:'mail',year:'2026',stack:['1C:Enterprise','HTML','Extensions','Testing'],
+  en:{name:'Personalized EPD Mailing',category:'Applied systems',status:'Tested solution',intro:'Custom HTML receipt emails and PDF attachments without modifying the core 1C configuration.',challenge:'Introduce client-specific messaging while preserving the behavior of the standard configuration.',solution:['Investigated the standard mailing flow and document sources.','Developed an isolated configuration-extension and external-form approach.','Tested the HTML layout and receipt data mapping in a controlled environment.'],result:'A working extension and external-form combination has been tested.',note:'Production rollout is not claimed.'},
+  ru:{name:'Персонализация рассылки ЕПД',category:'Прикладные системы',status:'Решение протестировано',intro:'HTML-письма с квитанциями и PDF без изменения основной конфигурации 1С.',challenge:'Внедрить отдельное оформление для клиента, сохранив стандартное поведение системы.',solution:['Изучен штатный механизм рассылки и источники данных.','Разработана связка расширения и внешней формы.','Проверены HTML-шаблон и данные квитанции на тестовом контуре.'],result:'Рабочая связка расширения и формы протестирована.',note:'Промышленное внедрение не заявляется.'}},
+ {id:'web',no:'04',type:'web',art:'web',year:'2026',stack:['HTML','CSS','JavaScript','UI / UX'],
+  en:{name:'kv-plata.ru Redesign',category:'Web & design',status:'In progress',intro:'A clearer structure and contemporary visual language for a housing-services website.',challenge:'Make a complex information site easier to navigate while keeping it practical and accessible.',solution:['Reorganized navigation and content priorities.','Defined a consistent typographic and visual system.','Refined the landing pages and knowledge-base experience.'],result:'Redesign is being implemented incrementally.'},
+  ru:{name:'Редизайн kv-plata.ru',category:'Веб и дизайн',status:'В работе',intro:'Новая структура и визуальный язык сайта жилищно-коммунального сервиса.',challenge:'Упростить сложный информационный сайт без потери функциональности.',solution:['Пересобрана навигация и структура материалов.','Выстроена система типографики и визуальных элементов.','Прорабатываются главная и внутренние страницы, база знаний.'],result:'Обновление внедряется поэтапно.'}},
+ {id:'jester',no:'05',type:'personal',art:'jester',year:'2026',stack:['Unity','C#','Game Design','Narrative'],
+  en:{name:'JESTER',category:'Personal project',status:'In development',intro:'An atmospheric game about a court jester, stealth, intrigue and the consequences of choices.',challenge:'Design a distinctive interactive experience where social roles and player choices shape the story.',solution:['Built initial stealth, patrol and interaction mechanics.','Developed a castle prototype and narrative direction.','Iterated on art direction, characters and environmental style.'],result:'An independent Unity project with ongoing prototyping.',note:'The game repository is currently private.'},
+  ru:{name:'JESTER',category:'Личный проект',status:'В разработке',intro:'Атмосферная игра о придворном шуте, скрытности, интригах и последствиях решений.',challenge:'Создать игровой опыт, где социальные роли и решения влияют на историю.',solution:['Реализованы первые механики стелса, патрулей и взаимодействия.','Создаётся прототип замка и структура повествования.','Идёт поиск визуального стиля персонажей и окружения.'],result:'Независимый проект на Unity в стадии прототипирования.',note:'Репозиторий игры пока закрыт.'}}
+];
+const stacks=[
+ {icon:'⌘',en:{title:'Application development',caption:'The work I do',items:['1C:Enterprise 8.3','BSL / 1C Queries','Integrations','Configuration Extensions','1C:EDT']},ru:{title:'Прикладная разработка',caption:'Рабочие инструменты',items:['1С:Предприятие 8.3','BSL / Запросы 1С','Интеграции','Расширения конфигурации','1С:EDT']}},
+ {icon:'◇',en:{title:'AI & systems',caption:'Questions worth exploring',items:['AI Agents','LLM Systems','Python','SQL / SQLite','APIs & Data']},ru:{title:'ИИ и системы',caption:'Исследования и эксперименты',items:['ИИ-агенты','LLM-системы','Python','SQL / SQLite','API и данные']}},
+ {icon:'✳',en:{title:'Web, design & games',caption:'Things I build for myself',items:['HTML / CSS / JavaScript','UI / UX','Unity','C#','Git / GitHub']},ru:{title:'Веб, дизайн и игры',caption:'Собственные проекты',items:['HTML / CSS / JavaScript','UI / UX','Unity','C#','Git / GitHub']}}
+];
+const journey=[
+ {date:'2026 — NOW',en:{date:'2026 — PRESENT',title:'1C Developer',body:'Applied software development, processing tools, integrations, data exchange and configuration extensions.'},ru:{date:'2026 — СЕЙЧАС',title:'Разработчик 1С',body:'Прикладная разработка, обработки, интеграции, обмены данными и расширения конфигурации.'}},
+ {date:'2026',en:{date:'2026 — PRACTICE',title:'1C Franchise Internship',body:'Hands-on work with real business processes, platform objects, registers, and team workflows.'},ru:{date:'2026 — ПРАКТИКА',title:'Практика во франчайзи 1С',body:'Работа с реальными бизнес-процессами, объектами платформы, регистрами и командной разработкой.'}},
+ {date:'CERTIFIED',en:{date:'CERTIFICATION',title:'1C:Professional',body:'Verified knowledge of the 1C:Enterprise platform, with continued learning beyond the exam.'},ru:{date:'СЕРТИФИКАЦИЯ',title:'1С:Профессионал',body:'Подтверждённые знания платформы 1С:Предприятие и дальнейшее развитие компетенций.'}},
+ {date:'ALWAYS',en:{date:'ALONG THE WAY',title:'Independent experiments',body:'Game development, AI agents, personal web products, and research into how systems work.'},ru:{date:'ПАРАЛЛЕЛЬНО',title:'Собственные эксперименты',body:'Разработка игры, ИИ-агенты, веб-проекты и исследование устройства сложных систем.'}}
+];
