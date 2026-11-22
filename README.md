@@ -1,45 +1,37 @@
-# DG. / OBSIDIAN — Personal Portfolio
+# Даниил Гончаров / Personal Archive
 
-Source for **[goncharov-code.ru](https://goncharov-code.ru/)**, the personal portfolio of Daniil Goncharov, Software Developer.
+Исходники личного сайта [goncharov-code.ru](https://goncharov-code.ru/).
 
-A lightweight static site in the **OBSIDIAN / Steel Blue** visual identity. It presents selected engineering cases, technology areas, experience, and contact links.
+## Визуальная концепция
 
-## Stack
+**Личный визуальный дневник**, вдохновлённый атмосферой Life is Strange: чёрно-белая палитра, бумага, Polaroid, небольшие неровные подписи, вырезки и рисунки. Все декоративные элементы сайта созданы отдельно; графика из игры не используется.
 
-HTML · CSS · Vanilla JavaScript · GitHub Pages
+## Технологии
 
-No Node.js build step or runtime backend is required for the deployed version.
+HTML, CSS и Vanilla JavaScript. Сборщик и бекенд не нужны.
 
-## Files
-
-| Path | Purpose |
+| Файл | Назначение |
 | --- | --- |
-| `index.html` | Page structure and metadata |
-| `styles.css` | Responsive design system, layout and themes |
-| `app.js` | Interactions and UI behavior |
-| `data.js` | Portfolio content and project data |
-| `favicon.svg` | Brand favicon |
-| `*.webp` | Visual assets |
-| `CNAME` | GitHub Pages custom-domain configuration |
+| `index.html` | Новая структура сайта |
+| `journal.css` | Тёмно-бумажная дизайн-система и адаптивная вёрстка |
+| `journal.js` | Карточки кейсов, модальные окна, мобильная навигация |
+| `data.js` | Описания пяти проектов; редактируется отдельно от дизайна |
+| `butterfly.svg` | Авторский декоративный знак |
+| `hero-portrait-hq.webp` | Портрет для Polaroid на первом экране |
+| `CNAME` | Настройка собственного домена GitHub Pages |
 
-## Local preview
+Файлы старого дизайна `styles.css`, `app.js` и другие ассеты остаются в истории/репозитории для безопасного отката, но новой страницей не загружаются.
 
-Clone or download the repository and serve its root using a local static HTTP server. For example, with Python installed:
+## Предпросмотр
 
 ```bash
 python -m http.server 8000
 ```
 
-Open `http://localhost:8000/`. Keep the assets and source files alongside `index.html`.
+Откройте `http://localhost:8000/` из корня проекта.
 
-## Deployment
+## Публикация
 
-GitHub Pages publishes the default branch from the repository root. Custom domain: `goncharov-code.ru`, configured through `CNAME` and DNS. Avoid removing or renaming `CNAME` when updating the site.
+GitHub Pages публикует `main`. Изменения дизайна готовятся в отдельной ветке и через pull request. Не объединяйте PR без проверки, что новый дизайн одобрен. `CNAME` не изменять.
 
-## Portfolio content
-
-Commercial cases are summarized without including clients' datasets or proprietary application source. Status labels distinguish completed work from work in progress. Edit `data.js` to revise the project descriptions.
-
----
-
-**DG. / OBSIDIAN** · © 2026 Daniil Goncharov
+Клиентские данные и непубличные исходники не публикуются.
